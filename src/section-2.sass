@@ -1,0 +1,120 @@
+/** section-2 **/
+@import "fonts"
+@import "variable"
+@import "calc"
+
+.section-2
+  margin-top: -124px
+  background: url('../src/img/img4.png') no-repeat calc(100% + 116px) 0%,
+  url('../src/img/wave.png') no-repeat calc(80% - 240px) 735px
+  padding-bottom: 200px
+
+
+.section-2__wrapper
+  width: $width_wrap
+  margin: auto
+  
+.container-2
+  display: flex
+  width: 920px
+  margin-top: 112px
+  justify-content: center
+.section-2__item
+  flex-basis: 242px
+  margin-right: 54px
+
+.section-2__title
+  padding-top: 242px
+  @include font(Gilroy-Bold, 46px, 1.5px, 1.2em)
+  text-transform: uppercase
+  width: 500px
+  position: relative
+  &:after
+    content: ''
+    position: absolute
+    width: 64px
+    height: 7px
+    display: block
+    background-color: $red
+    bottom: -38px
+    left: 0
+
+.item__title
+  @include font(Gilroy-Bold, 18px, 1.5px)
+  margin-bottom: 10px
+  &:after
+    content: ''
+    position: absolute
+    display: block
+    width: 52px
+    height: 52px
+    background-color: #f5f5f5
+    border-radius: 50%
+    z-index: -1
+    transform: translate(-45%, -92%)
+
+.item__text
+  @include font(Gilroy-Light, 18px, 1px, 1.5em)
+
+@media (max-width: $bpTablet) and (min-width: $bpMobile)
+  .section-2__wrapper
+    width: $width_wrap_tablet
+  .section-2
+    background: url('../src/img/tablet/img4.png') no-repeat calc(100% + 140px) 70px,
+    url('../src/img/wave.png') no-repeat calc(80%) 555px
+    padding-bottom: 140px
+  .section-2__title
+    padding-top: 225px
+    @include font(Gilroy-Bold, 30px, 1.5px, 1.2em)
+    width: 400px
+    &:after
+      bottom: -30px
+      left: 0
+  .container-2
+    width: 740px
+    margin-top: 74px
+    justify-content: space-between
+  .section-2__item
+    flex-basis: auto
+    margin-right: 10px
+  .item__title
+    @include font(Gilroy-Bold, 0.95rem, 1.0px)
+    margin-bottom: 10px
+  .item__text
+    @include font(Gilroy-Light, 1rem, 1px, 1.5em)
+
+@media (max-width: $bpMobile)
+  .section-2__wrapper
+    width: 90%
+  .section-2
+    background: none
+    padding-bottom: 0
+  .section-2__title
+    width: 100%
+    padding-top: 160px
+    @include font(Gilroy-Bold, 25px, 1.5px, 1.2em)
+    text-align: center
+    &:after
+      left: 50%
+      transform: translateX(-50%)
+      bottom: -20px
+  .container-2
+    flex-direction: column
+    width: 100%
+    margin-top: 60px
+    text-align: center
+    align-items: center
+  .section-2__item
+    margin-right: 0
+    flex-basis: 160px
+  .item__title
+    @include font(Gilroy-Bold, 15px, 1.5px)
+    &:after
+      left: 50%
+      transform: translate(-50%, -92%)
+  .item__text
+    width: 70%
+    margin: auto
+    @include font(Gilroy-Light, 15px, 1px, 1.5em)
+
+

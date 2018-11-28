@@ -1,0 +1,53 @@
+/** footer **/
+@import "fonts"
+@import "variable"
+
+.footer
+  //height: 180px
+  background-color: #f8f8f8
+
+.footer__wrapper
+  width: $width_wrap
+  margin: auto
+  padding-top: 30px
+  display: flex
+  justify-content: space-between
+.footer__school, .footer__address, .contacts__phone
+  @include font(Gilroy-Light, 18px)
+.footer__address, .contacts__call-request
+  margin-bottom: 20px
+
+.contacts__phone
+  margin-bottom: 10px
+  display: block
+.footer__logo
+  margin-bottom: 10px
+
+.footer__contacts--right
+  text-align: right
+.media-link
+  margin-left: 25px
+
+.contacts__media
+  margin-bottom: 15px
+
+@media (max-width: $bpTablet) and (min-width: $bpMobile)
+  .footer__wrapper
+    width: $width_wrap_tablet
+  .footer__school, .footer__address, .contacts__phone
+    @include font(Gilroy-Light, 16px)
+@media (max-width: $bpMobile)
+  .footer__wrapper
+    width: 90%
+    flex-direction: column
+    align-items: center
+  .footer__address, .contacts__phone
+    @include font(Gilroy-Light, 0.9rem)
+  .footer__school
+    display: none
+  .footer__contacts--right
+    text-align: center
+  .footer
+    //height: 220px
+  .footer__logo
+    text-align: center

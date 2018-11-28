@@ -1,0 +1,14 @@
+@function calculate($container1, $pos1, $container2, $pos2)
+  $percent: (100% * ($pos2 - $pos1) / ($container2 - $container1))
+  $px: $pos1 - ($container1 * $percent / 100%)
+  $sign: '+'
+  @if $px < 0
+    $sign: '-'
+    $px: -1 * $px
+  @return #{$percent} #{$sign} #{$px}
+
+
+
+
+
+

@@ -1,0 +1,98 @@
+/** section-7 **/
+@import "fonts"
+@import "variable"
+
+.section-7
+  padding-top: 120px
+  padding-bottom: 120px
+  background: url(../src/img/plane.png) no-repeat calc(25% - 100px) 120px,
+  url(../src/img/small_blue_circle.png) no-repeat calc(70% + 100px) 120px,
+  url(../src/img/small_blue_circle.png) no-repeat calc(40% + 100px) 520px,
+  url(../src/img/tiny_blue_circle.png) no-repeat calc(70% + 145px) 80px,
+  url(../src/img/tiny_blue_circle.png) no-repeat calc(75% + 145px) 120px,
+  url(../src/img/wave.png) no-repeat calc(47% - 100px) 100px,
+  url(../src/img/wave.png) no-repeat calc(60% + 100px) 20px
+
+
+.section-7__wrapper
+  width: $width_wrap
+  margin: auto
+.trial-lesson
+  width: 520px
+  margin-left: auto
+  margin-right: 100px
+
+
+.trial-lesson__title
+  @include font(Gilroy-Bold, 46px, 1.5px, 1.2em)
+  text-transform: uppercase
+  position: relative
+  margin-bottom: 80px
+
+  &:before
+    content: ''
+    width: 65px
+    height: 7px
+    background-color: $red
+    position: absolute
+    top: 140px
+.trial-lesson__promo-message
+  @include font(Gilroy-Light, 18px, 0.9px, 1.6em)
+  margin-bottom: 30px
+.trial-lesson__button
+  margin-bottom: 40px
+
+@media (max-width: $bpTablet) and (min-width: $bpMobile)
+  .section-7
+    background: url(../src/img/plane.png) no-repeat 20px 104px,
+    url(../src/img/small_blue_circle.png) no-repeat calc(70% + 100px) 120px,
+    url(../src/img/small_blue_circle.png) no-repeat calc(40% + 100px) 520px,
+    url(../src/img/tiny_blue_circle.png) no-repeat calc(70% + 145px) 80px,
+    url(../src/img/tiny_blue_circle.png) no-repeat calc(75% + 145px) 120px,
+    url(../src/img/wave.png) no-repeat calc(47% - 100px) 100px,
+    url(../src/img/wave.png) no-repeat calc(60% + 100px) 20px
+  .section-7__wrapper
+    width: $width_wrap_tablet
+  .trial-lesson__title
+    @include font(Gilroy-Bold, 30px, 1.5px, 1.2em)
+    margin-top: 30px
+    margin-bottom: 45px
+    &:before
+      content: ''
+      width: 65px
+      height: 7px
+      background-color: $red
+      position: absolute
+      top: 90px
+  .trial-lesson
+    width: 345px
+    margin-right: 0
+  .trial-lesson__promo-message
+    @include font(Gilroy-Light, 16px, 0.9px, 1.6em)
+
+@media (max-width: $bpMobile)
+  .section-7__wrapper
+    width: 90%
+  .trial-lesson
+    width: 100%
+  .section-7
+    background: url(../src/img/plane.png) no-repeat 0 0
+    background-size: contain
+    padding:
+      top: 200px
+      bottom: 40px
+  .trial-lesson__title
+    @include font(Gilroy-Bold, 25px, 1.5px, 1.2em)
+    width: 100%
+    text-align: center
+    margin-bottom: 40px
+    &:before
+      top: auto
+      bottom: -20px
+      left: 50%
+      transform: translateX(-50%)
+
+  .trial-lesson__promo-message
+    @include font(Gilroy-Light, 1rem, 0.9px, 1.6em)
+    margin-bottom: 30px
+    text-align: center

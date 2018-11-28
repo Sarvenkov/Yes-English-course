@@ -1,0 +1,141 @@
+/** section-6 **/
+@import "fonts"
+@import "variable"
+
+
+.section-6
+  margin-top: -274px
+  background: url(../src/img/waves.png) no-repeat calc(80% + 95px) 74px,
+  url(../src/img/small_blue_circle.png) no-repeat calc(65% + 108px) 156px
+  margin-bottom: 120px
+
+.section-6__wrapper
+  width: $width_wrap
+  margin: auto
+  
+.section-6__title
+  @include font(Gilroy-Bold, 46px, 1.5px)
+  text-transform: uppercase
+  position: relative
+  margin-bottom: 104px
+  &:before
+    content: ''
+    width: 65px
+    height: 7px
+    background-color: $red
+    position: absolute
+    top: 90px
+  
+.container-6
+  display: flex
+
+.section-6__img
+  width: 200px
+.section-6__review
+  max-width: 760px
+  margin-left: 32px
+.review__name
+  @include font(Gilroy-Bold, 18px, 1px, 1em)
+  margin-bottom: 28px
+.review__message
+  @include font(Gilroy-Light, 18px, 0.9px, 1.6em)
+  margin-bottom: 20px
+.review--link
+  @include font(Gilroy-Light, 18px)
+  color: $red
+  border: none
+  background: none
+  padding: 0
+  height: 25px
+  border-bottom: $red solid 1px
+  cursor: pointer
+  display: inline-block
+.review__link
+  margin-bottom: 50px
+  
+.line
+  position: relative
+  display: block
+  width: 1000px
+  height: 8px
+  background-color: #e9e9e9
+  border-radius: 4px
+  margin-bottom: 10px
+  .line__littleline
+    position: absolute
+    width: 25%
+    height: 8px
+    border-radius: 4px
+    top: 0
+    left: 0
+    background-color: $red
+    box-shadow: 0px 4px 5px rgba(245, 17, 44, 0.3)
+
+@media (max-width: $bpTablet) and (min-width: $bpMobile)
+  .section-6
+    background: url(../src/img/waves.png) no-repeat calc(80% + 95px) 0,
+    url(../src/img/small_blue_circle.png) no-repeat 860px 15px
+  .section-6__wrapper
+    width: $width_wrap_tablet
+  .section-6__title
+    @include font(Gilroy-Bold, 30px, 1.5px)
+    margin-bottom: 80px
+    &:before
+      top: 60px
+  .section-6__review
+    margin-left: 24px
+  .review__name
+    @include font(Gilroy-Bold, 16px, 0.7px, 1em)
+    margin-bottom: 32px
+  .review__message
+    @include font(Gilroy-Light, 16px, 0.8px, 1.5rem)
+    margin-bottom: 12px
+  .review--link
+    font-size: 16px
+  .review__link
+    margin-bottom: 60px
+  .line
+    width: 720px
+    .line__littleline
+      width: 25%
+      height: 6px
+
+@media (max-width: $bpMobile)
+  .section-6__wrapper
+    width: 90%
+  .section-6__title
+    @include font(Gilroy-Bold, 25px, 1.5px)
+    margin-bottom: 70px
+    text-align: center
+    &:before
+      top: auto
+      bottom: -20px
+      left: 50%
+      transform: translateX(-50%)
+  .section-6
+    background: none
+    margin-top: 0
+  .container-6
+    width: 100%
+    flex-direction: column
+    align-items: center
+
+  .section-6__img
+    width: auto
+  .review__name
+    width: 100%
+    text-align: center
+    @include font(Gilroy-Bold, 0.95rem, 1px, 1em)
+    margin:
+      bottom: 25px
+      top: 20px
+  .section-6__review
+    max-width: 100%
+    margin-left: 0
+    width: 100%
+    text-align: center
+  .review__message
+    @include font(Gilroy-Light, 1rem, 0.9px, 1.6em)
+    text-align: left
+  .line
+    width: 100%

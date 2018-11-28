@@ -1,0 +1,224 @@
+/** section-4 **/
+@import "fonts"
+@import "variable"
+
+.section-4
+  background: url(../src/img/wave.png) no-repeat calc(#{calculate(1903px, 661px, 1306px, 318px)}) calc(#{calculate(1095px, 760px, 848px, 624px)}),
+  url(../src/img/bigben.png) no-repeat calc(-513px + 42%) 0
+  background-size: auto, calc(26.0vw + 250px)
+  position: relative
+  margin-bottom: 10px
+
+
+  &:after
+    content: ''
+    position: absolute
+    border-radius: 50%
+    border: 31px solid #2429ff
+    height: 110px
+    width: 110px
+    top: calc(#{calculate(1095px, 172px, 848px, 120px)})
+    left: calc(#{calculate(1903px, 158px, 1306px, -110px)})
+    z-index: -1
+  &:before
+    content: ''
+    position: absolute
+    border-radius: 50%
+    border: 110px solid #f5f5f5
+    height: 410px
+    width: 410px
+    top: 250px
+    left: calc(#{calculate(1903px, 105px, 1306px, -250px)})
+    z-index: -2
+
+.section-4__wrapper
+  width: $width_wrap
+  margin: 0 auto
+
+.section-4__flex-container
+  display: flex
+  flex-direction: column
+  flex-wrap: wrap
+  align-content: space-between
+  width: $width_wrap*0.661
+  height: 700px
+  margin-left: auto
+
+.section-4__item
+  width: $width_wrap*0.661/2 - 15
+  height: 148px
+.section-4__title,
+.section-4__price,
+.section-4__description
+  width: $width_wrap*0.661
+  margin-left: auto
+
+
+.section-4__title
+  @include font(Gilroy-Bold, 46px, 1.5px, 1.15em)
+  text-transform: uppercase
+  padding-top: 135px
+  margin-bottom: 75px
+  position: relative
+  &:after
+    content: '?'
+    position: absolute
+    right: 36px
+    top: 160px
+    font-size: 300px
+    color: #f5f5f5
+    z-index: -1
+  &:before
+    content: ''
+    width: 65px
+    height: 7px
+    background-color: $red
+    position: absolute
+    top: 218px
+
+.section-4__price
+  font-family: Gilroy-Light
+  color: $red
+  font-weight: 100
+  font-size: 46px
+  letter-spacing: 1.5px
+  margin-bottom: 14px
+
+.section-4__description
+  font-family: Gilroy-Light
+  font-size: 19px
+  line-height: 1.5em
+  margin-bottom: 10px
+
+.section-4__item
+  font-size: 18px
+  line-height: 1.8rem
+  .section-4__item__title
+    font-family: Gilroy-Bold
+    font-size: 18px
+    letter-spacing: 1px
+    margin-bottom: 8px
+  .section-4__item__text
+    font-family: Gilroy-Light
+    letter-spacing: 1px
+
+@media (max-width: $bpTablet) and (min-width: $bpMobile)
+  .section-4
+    //background: url(../src/img/wave.png) no-repeat 570px 750px,
+    //url(../src/img/tablet/bigben.png) no-repeat calc(-400px + 32%) 0
+  .section-4__title
+    margin-top: 10px
+    padding-top: 32px
+    margin-bottom: 50px
+    @include font(Gilroy-Bold, 30px, 1.5px, 1.15em)
+    &:after
+      content: '?'
+      right: 110px
+      top: 35px
+      font-size: 200px
+    &:before
+      content: ''
+      width: 65px
+      height: 7px
+      background-color: $red
+      position: absolute
+      top: 88px
+  .section-4__wrapper
+    width: $width_wrap_tablet
+  .section-4__flex-container
+    width: 592px
+  .section-4__title,
+  .section-4__price,
+  .section-4__description
+    width: 592px
+  .section-4__price
+    font-size: 30px
+    margin-bottom: 30px
+  .section-4__description
+    font-size: 17px
+    letter-spacing: 0.3px
+    margin-bottom: 8px
+  .section-4__item
+    width: 280px
+    height: 130px
+  .section-4__item
+    .section-4__item__title
+      font-size: 0.95rem
+      letter-spacing: 1.2px
+    .section-4__item__text
+      font-size: 0.95rem
+      line-height: 1.6em
+      letter-spacing: 1.2px
+  .section-4__flex-container
+    height: 610px
+
+@media (max-width: $bpMobile)
+  .section-4__wrapper
+    width: 90%
+  .section-4__title
+    @include font(Gilroy-Bold, 25px, 1.5px, 1.15em)
+    width: 100%
+    text-align: center
+    margin-top: 0
+    padding-top: 420px
+    margin-bottom: 35px
+
+    &:after
+      display: none
+    &:before
+      content: ''
+      width: 65px
+      height: 7px
+      background-color: $red
+      position: absolute
+      top: auto
+      bottom: -20px
+      left: 50%
+      transform: translateX(-50%)
+
+  .section-4
+    background: url(../src/img/wave.png) no-repeat 90% 250px,
+    url(../src/img/phone/bigben.png) no-repeat 0 0
+    background-size: 90px, auto auto
+    &:after
+      content: ''
+      position: absolute
+      border-radius: 50%
+      border: 12px solid #2429ff
+      height: 45px
+      width: 45px
+      top: 46px
+      left: 20%
+      z-index: -1
+    &:before
+      content: ''
+      position: absolute
+      border-radius: 50%
+      border: 40px solid #f5f5f5
+      height: 148px
+      width: 148px
+      top: 84px
+      left: 15%
+      z-index: -2
+  .section-4__price
+    width: 100%
+    font-size: 25px
+    text-align: center
+  .section-4__description
+    width: 100%
+    font-size: 0.9rem
+    text-align: center
+  .section-4__flex-container
+    width: 100%
+    height: auto
+  .section-4__item
+    width: 100%
+    height: auto
+    min-height: 100px
+    .section-4__item__title, .section-4__item__text
+      font-size: 0.90rem
+      text-align: center
+      line-height: 1.2rem
+
+
+

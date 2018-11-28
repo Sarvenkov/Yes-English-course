@@ -1,0 +1,18 @@
+@font-face
+  font-family: Gilroy-Light
+  src: url("../src/fonts/Gilroy-Light.otf")
+
+@font-face
+  font-family: Museo
+  src: url("../src/fonts/MuseoSansCyrl_500-webfont.woff2")
+
+@font-face
+  font-family: Gilroy-Bold
+  src: url("../src/fonts/Gilroy-ExtraBold.otf")
+
+@mixin font($family: Gilroy-Bold, $size: 18px, $spacing: 1px, $height: 1.5em)
+  font-family: $family
+  font-size: $size
+  letter-spacing: $spacing
+  line-height: $height
+

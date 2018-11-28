@@ -1,0 +1,15 @@
+{
+  "name": "y",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "build": "node-sass src/style.sass dest/style.css",
+    "watch": "node-sass src/style.sass dest/style.css -w"
+  },
+  "author": "Oleg",
+  "license": "ISC",
+  "devDependencies": {
+    "node-sass": "^4.9.3"
+  }
+}

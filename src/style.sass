@@ -1,0 +1,273 @@
+@import "fonts"
+@import "variable"
+@import "section-1"
+@import "section-2"
+@import "section-3"
+@import "section-4"
+@import "section-5"
+@import "section-6"
+@import "section-7"
+@import "footer"
+@import "calc"
+
+html, body
+  padding: 0
+  margin: 0
+  box-sizing: border-box
+  overflow-x: hidden
+
+
+.header
+  max-width: 1920px
+  //height: 814px
+  margin: 0 auto
+  background: url(../src/img/head.png) no-repeat calc(50% - 270px) -20px,
+  url(../src/img/yes.png) no-repeat 0 126px
+  background-size: contain
+
+
+a
+  text-decoration: none
+  color: #000
+.header-wrapper
+  width: $width_wrap
+  margin: 0 auto
+  height: 100%
+  position: relative
+  letter-spacing: 0.07em
+  background: url(../src/img/wave.png) no-repeat 996px 586px
+  &:before
+    content: ''
+    position: absolute
+    width: 56px
+    height: 56px
+    border-radius: 50%
+    border: 15px solid #2B00FA
+    left: -110px
+    top: 360px
+  &:after
+    content: ''
+    position: absolute
+    width: 23px
+    height: 23px
+    border-radius: 50%
+    background-color: #2B00FA
+    right: 64px
+    top: 195px
+.header__content
+  width: 520px
+  margin-left: auto
+  //float: right
+  margin-top: 190px
+.header__title
+  text-transform: uppercase
+  font-family: Gilroy-Bold
+  letter-spacing: 1.7px
+  margin-bottom: 46px
+  .title--1
+    margin-bottom: 3px
+    font-size: 34px
+  .title--2
+    margin:
+      top: 0
+      bottom: 30px
+    font-size: 46px
+    line-height: 1.2em
+    position: relative
+    &:before
+      content: ''
+      width: 65px
+      height: 7px
+      background-color: $red
+      position: absolute
+      left: 0
+      top: 130px
+
+.header__text
+  @include font(Gilroy-Light, 18px, 0.9px, 1.35em)
+  margin-bottom: 100px
+
+.main--btn
+  display: block
+  height: 72px
+  width: 372px
+  background-color: $red
+  color: #ffffff
+  border-radius: (72px/2)
+  border: none
+  text-align: center
+  vertical-align: center
+  line-height: 72px
+  font-size: 16px
+  font-family: Gilroy-Bold
+  letter-spacing: 2px
+  box-shadow: 0 10px 10px rgba(245,17,44,0.4)
+.header__button
+  margin-bottom: 100px
+
+.top-header
+  width: 100%
+  height: 104px
+  display: flex
+  justify-content: space-between
+  align-items: center
+.logo__dot
+  display: inline-block
+  width: 8px
+  height: 8px
+  background-color: #000
+.logo
+  font-size: 50px
+  color: $red
+  font-family: Gilroy-Bold //museo-900 must be
+.top-header__contacts
+  width: 636px
+  display: flex
+  justify-content: space-between
+  margin-right: 4px
+  @include font(Gilroy-Light, 18px)
+.contacts__call-request
+  @include font(Gilroy-Light, 18px)
+  color: $red
+  border: none
+  background: none
+  padding: 0
+  height: 25px
+  border-bottom: $red solid 1px
+  cursor: pointer
+
+
+@media (max-width: 1350px) and (min-width: 740px)
+  html
+    font-size: 16px
+  .header
+    background: url(../src/img/tablet/head.png) no-repeat calc(50% - 255px) 15px,
+    url(../src/img/yes.png) no-repeat 0 136px,
+    url(../src/img/wave.png) no-repeat 82% 73%
+    background-size: auto, contain
+
+  .header-wrapper
+    width: 730px
+
+    &:before
+      content: ''
+      position: absolute
+      width: 56px
+      height: 56px
+      border-radius: 50%
+      border: 15px solid #2B00FA
+      left: calc(0% - 194px)
+      top: 48%
+
+    &:after
+      right: 94px
+
+      top: 118px
+
+  .top-header__contacts
+    width: 550px
+    @include font(Gilroy-Light, 16px)
+  .contacts__call-request
+    @include font(Gilroy-Light, 16px)
+  .logo__dot
+    width: 6px
+    height: 6px
+  .logo
+    font-size: 32px
+  .top-header
+    height: 80px
+  .header__content
+    width: 408px
+    margin-top: 86px
+
+
+  .header__title
+    letter-spacing: 1.7px
+    line-height: 1.5em
+    margin-bottom: 36px
+    .title--1
+      margin-bottom: 0px
+      font-size: 24px
+      letter-spacing: 1.4px
+    .title--2
+      font-size: 30px
+      line-height: 1.3em
+      letter-spacing: 1.7px
+      &:before
+        top: 92px
+  .header__text
+    @include font(Gilroy-Light, 16px, 0.8px, 1.6rem)
+    margin-bottom: 70px
+  .main--btn
+    height: 62px
+    width: 296px
+    border-radius: (62px/2)
+    line-height: 62px
+    font-size: 14px
+    letter-spacing: 0.7px
+  .header__button
+    margin-bottom: 60px
+
+@media (max-width: $bpMobile)
+  .header
+    background: url(../src/img/phone/head.png) no-repeat 50% 10%
+  .header-wrapper
+    width: 90%
+    &:before
+      width: 32px
+      height: 32px
+      border: 9px solid #2B00FA
+      left: 0
+      top: 300px
+    &:after
+      content: ''
+      position: absolute
+      width: 23px
+      height: 23px
+      border-radius: 50%
+      background-color: #2B00FA
+      right: 10px
+      top: 100px
+  .contacts__address
+    display: none
+  .top-header__contacts
+    width: 200px
+    flex-wrap: wrap
+    justify-content: flex-end
+    @include font(Gilroy-Light, 14px, 1px, 0.7rem)
+  .logo__dot
+    width: 6px
+    height: 6px
+  .logo
+    font-size: 32px
+  .contacts__call-request
+    @include font(Gilroy-Light, 14px)
+  .top-header
+    height: 72px
+  .header__content
+    width: 100%
+    max-width: 310px
+    margin: auto
+    margin-top: 310px
+    text-align: center
+  .header__title
+    margin-bottom: 30px
+    .title--1
+      font-size: 19px
+    .title--2
+      font-size: 23px
+      margin-bottom: 20px
+      &:before
+        left: 50%
+        transform: translateX(-50%)
+        top: 66px
+  .header__text
+    @include font(Gilroy-Light, 15px, 0.8px, 1.35em)
+    margin-bottom: 10px
+  .main--btn
+    height: 62px
+    width: 100%
+    border-radius: (62px/2)
+    line-height: 62px
+    font-size: 14px
+    letter-spacing: 0.7px

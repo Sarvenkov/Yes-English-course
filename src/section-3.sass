@@ -1,0 +1,105 @@
+/** section-3 **/
+@import "fonts"
+@import "variable"
+
+.section-3
+  position: relative
+  margin-bottom: 80px
+  background: url(../src/img/waves.png) no-repeat calc(90% + 40px) 258px,
+  url(../src/img/small_blue_circle.png) no-repeat calc(10% + 40px) 258px
+  &:after
+    content: ''
+    position: absolute
+    border-radius: 280px
+    border: 78px solid #f5f5f5
+    height: 280px
+    width: 280px
+    top: -44px
+    right: calc(10% - 50px)
+    z-index: -1
+  &:before
+    content: ''
+    position: absolute
+    top: 268px
+    left: 0
+    height: 2px
+    width: 1200px
+    background-color: #f5f5f5
+    z-index: -1
+
+.section-3__wrapper
+  width: $width_wrap
+  margin: 0 auto
+
+.container-3
+  display: flex
+  width: 100%
+  justify-content: space-between
+
+.section-3__item
+  flex-basis: $width_wrap/3 - 20px
+
+.section-3__title
+  @include font(Gilroy-Bold, 46px, 1.7px, 1.2em)
+  text-transform: uppercase
+  margin-bottom: 46px
+
+.item__name
+  @include font(Gilroy-Bold, 18px, 1.0px)
+  margin-bottom: 7px
+
+.item__text
+  @include font(Gilroy-Light, 14px, 0.7px, 1.75em)
+
+@media (max-width: $bpTablet) and (min-width: $bpMobile)
+
+  .section-3
+    background: url(../src/img/waves.png) no-repeat calc(75% + 50px) 825px
+    margin-bottom: 0px
+    &:after
+      top: 580px
+      right: calc(10% - 270px)
+      z-index: -1
+  .section-3__wrapper
+    width: $width_wrap_tablet
+  .container-3
+    flex-wrap: wrap
+  .item__text
+    width: 344px
+  .section-3__item
+    flex-basis: auto
+    margin-bottom: 40px
+  .section-3__title
+    @include font(Gilroy-Bold, 30px, 1.7px, 1.2em)
+    margin-bottom: 52px
+
+@media (max-width: $bpMobile)
+  .section-3__wrapper
+    width: 90%
+  .section-3
+    background: none
+    margin-bottom: 0
+    &:after
+      display: none
+    &:before
+      display: none
+  .section-3__title
+    @include font(Gilroy-Bold, 25px, 1.7px, 1.2em)
+    text-align: center
+  .container-3
+    flex-direction: column
+    align-items: center
+    width: 100%
+  .section-3__item__text
+    width: 290px
+    margin: auto
+    margin-bottom: 30px
+    @include font(Gilroy-Light, 14px, 0.7px, 1.1rem)
+  .item__name
+    @include font(Gilroy-Bold, 15px, 1.0px)
+
+@media (min-width: 600px) and (max-width: $bpMobile)
+  .item__text
+    width: 360px
+
+
